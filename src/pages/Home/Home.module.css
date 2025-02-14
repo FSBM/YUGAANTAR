@@ -1,3 +1,9 @@
+.countdownItem {
+  letter-spacing: 2.5px;
+  align-self: center;
+  font: 400 76px Monomaniac One, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
 .container {
   background-color: transparent;
   display: flex;
