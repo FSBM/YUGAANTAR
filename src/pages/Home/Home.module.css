@@ -10,22 +10,16 @@
   flex-direction: column;
   align-items: center;
   color: #ffffff;
-  padding: 0 80px 0 80px;
+  padding: 0 80px;
   z-index: 3;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .festTitle {
   text-align: center;
   margin-top: 2rem;
   font: 400 32px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
-}
-
-@media (max-width: 991px) {
-  .festTitle {
-    max-width: 100%;
-    margin-top: 40px;
-    font-size: 36px;
-  }
 }
 
 .festName {
@@ -35,24 +29,12 @@
   width: 45%;
 }
 
-@media (max-width: 991px) {
-  .festName {
-    max-width: 100%;
-    font-size: 36px;
-  }
-}
-
 .festDescription {
   text-align: center;
   margin-top: 40px;
   width: 44rem;
+  max-width: 100%;
   font: 400 18px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
-}
-
-@media (max-width: 991px) {
-  .festDescription {
-    max-width: 100%;
-  }
 }
 
 .actionButtons {
@@ -61,6 +43,7 @@
   margin-bottom: 5rem;
   justify-content: space-around;
   width: 30rem;
+  max-width: 100%;
 }
 
 .primaryButton {
@@ -73,12 +56,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 991px) {
-  .primaryButton {
-    padding: 18px;
-  }
-}
-
 .secondaryButton {
   border-radius: 10px;
   background-color: #f5449e;
@@ -87,12 +64,6 @@
   color: #ffffff;
   border: none;
   cursor: pointer;
-}
-
-@media (max-width: 991px) {
-  .secondaryButton {
-    padding: 12px 18px;
-  }
 }
 
 .eventInfo {
@@ -108,12 +79,12 @@
   height: auto;
   background-color: #06061f;
   z-index: 3;
+  width: 100%;
 }
 
 .blue_gradient {
   width: 100%;
 }
-
 
 .countdown {
   display: flex;
@@ -122,16 +93,9 @@
   gap: 40px 60px;
   white-space: nowrap;
   text-align: center;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
-}
-
-@media (max-width: 991px) {
-  .countdown {
-    max-width: 100%;
-    margin-top: 40px;
-    white-space: initial;
-  }
+  width: 100%;
 }
 
 .landingPage {
@@ -142,12 +106,7 @@
   align-items: center;
   color: #ffffff;
   position: relative;
-}
-
-@media (max-width: 991px) {
-  .landingPage {
-    padding: 32px 20px 100px;
-  }
+  width: 100%;
 }
 
 .highlightedText {
@@ -175,14 +134,15 @@
   text-align: center;
   font: 700 76px "Poppins", sans-serif;
   padding: 90px 0 0 0;
+  width: 100%;
 }
 
-.eventsHeader>h6 {
+.eventsHeader > h6 {
   position: relative;
   z-index: 4;
 }
 
-.eventsHeader>h1 {
+.eventsHeader > h1 {
   font-size: 200px;
   margin-top: -80px;
   color: transparent;
@@ -209,8 +169,8 @@
   background-color: transparent;
   z-index: 3;
   padding: 0 50px;
+  box-sizing: border-box;
 }
-
 
 .primeEvents {
   position: relative;
@@ -226,15 +186,16 @@
   z-index: 2;
 }
 
-.primeEvents>img {
+.primeEvents > img {
   position: absolute;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: inherit;
   border-radius: 20px 20px 0 0;
-
 }
 
-.primeEvents>span {
+.primeEvents > span {
   margin-bottom: 10px;
   z-index: 3;
 }
@@ -282,7 +243,6 @@
   flex: 1;
 }
 
-
 .eventCards {
   width: 100%;
   height: auto;
@@ -303,9 +263,10 @@
   justify-content: space-between;
   padding: 10px;
   z-index: 3;
+  box-sizing: border-box;
 }
 
-.endCards>div {
+.endCards > div {
   background-color: #02173C;
   width: 20%;
   height: 100%;
@@ -322,9 +283,10 @@
   justify-content: space-between;
   padding: 10px;
   z-index: 4;
+  box-sizing: border-box;
 }
 
-.middleCards>div {
+.middleCards > div {
   background-color: #02173C;
   width: 30%;
   height: 100%;
@@ -341,9 +303,10 @@
   justify-content: space-between;
   padding: 10px;
   z-index: 5;
+  box-sizing: border-box;
 }
 
-.frontCards>div {
+.frontCards > div {
   background-color: #02173C;
   width: 100%;
   height: 100%;
@@ -362,14 +325,14 @@
   z-index: 3;
 }
 
-.whyToJoinUs>div {
+.whyToJoinUs > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.whyToJoinUs>div>h1 {
+.whyToJoinUs > div > h1 {
   color: var(--Electric-Lime-100, #F7FFC5);
   text-align: center;
   font-family: Lexend;
@@ -377,10 +340,9 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-
 }
 
-.whyToJoinUs>div>span {
+.whyToJoinUs > div > span {
   color: #FFF;
   text-align: center;
   font-family: "Source Sans 3";
@@ -401,8 +363,9 @@
   margin-top: 4rem;
 }
 
-.whyCards>div {
+.whyCards > div {
   width: 33%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -410,7 +373,7 @@
   margin: 10px;
 }
 
-.whyCards>div>h2 {
+.whyCards > div > h2 {
   color: #D2FC3C;
   text-align: center;
   font-family: Lexend;
@@ -421,7 +384,7 @@
   margin: 0.5rem 0;
 }
 
-.whyCards>div>span {
+.whyCards > div > span {
   color: #FFF;
   text-align: center;
   font-family: "Source Sans 3";
@@ -435,9 +398,11 @@
   margin: 5rem;
   display: flex;
   flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
 }
 
-.festiveHighlights>h1 {
+.festiveHighlights > h1 {
   color: var(--Wild-Strawberry-100, #FDE6F3);
   text-align: center;
   font-family: Lexend;
@@ -448,15 +413,16 @@
   margin-bottom: 3rem;
 }
 
-.festiveHighlights>div {
+.festiveHighlights > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10rem;
+  flex-wrap: wrap;
 }
 
-.festiveHighlights>div>div {
+.festiveHighlights > div > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -464,7 +430,7 @@
   margin: 20px;
 }
 
-.festiveHighlights>div>div>span {
+.festiveHighlights > div > div > span {
   color: var(--Wild-Strawberry-100, #FDE6F3);
   text-align: center;
   font-family: Lexend;
@@ -474,7 +440,7 @@
   line-height: normal;
 }
 
-.festiveHighlights>div>div>p {
+.festiveHighlights > div > div > p {
   color: #F5449E;
   text-align: center;
   font-family: "Source Sans 3";
@@ -486,9 +452,11 @@
 
 footer {
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-footer>div {
+footer > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -509,6 +477,8 @@ footer>div {
   display: inline-flex;
   align-items: center;
   gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .copyright {
@@ -518,94 +488,491 @@ footer>div {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-align: center;
 }
 
+/* Large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 120px;
+  }
+  
+  .eventsHeader > h1 {
+    font-size: 220px;
+  }
+}
 
+/* Desktop/laptop screens (992px - 1199px) */
+@media (max-width: 1199px) {
+  .countdownItem {
+    font-size: 60px;
+  }
+  
+  .festName {
+    width: 60%;
+  }
+  
+  .festDescription {
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .eventsHeader > h1 {
+    font-size: 160px;
+    margin-top: -60px;
+    -webkit-text-stroke: 3px white;
+  }
+  
+  .whyCards {
+    gap: 60px 100px;
+  }
+  
+  .festiveHighlights > div {
+    gap: 6rem;
+  }
+}
 
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  .container {
+    padding: 0 60px;
+  }
+  
+  .festTitle {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 36px;
+  }
+  
+  .festName {
+    max-width: 100%;
+    font-size: 36px;
+  }
+  
+  .festDescription {
+    max-width: 100%;
+  }
+  
+  .countdown {
+    margin-top: 40px;
+    white-space: initial;
+    gap: 30px;
+  }
+  
+  .countdownItem {
+    font-size: 48px;
+  }
+  
+  .eventsHeader {
+    font: 700 60px "Poppins", sans-serif;
+  }
+  
+  .eventsHeader > h1 {
+    font-size: 130px;
+    margin-top: -50px;
+    -webkit-text-stroke: 3px white;
+  }
+  
+  .event_category_buttons {
+    width: 50%;
+  }
+  
+  .primeEvents {
+    min-width: 30%;
+  }
+  
+  .frontCards {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .endCards {
+    height: 200px;
+  }
+  
+  .middleCards {
+    height: 280px;
+  }
+  
+  .whyToJoinUs {
+    width: 80%;
+  }
+  
+  .whyToJoinUs > div > h1 {
+    font-size: 50px;
+  }
+  
+  .whyCards > div {
+    width: 40%;
+  }
+  
+  .festiveHighlights {
+    margin: 4rem 2rem;
+  }
+  
+  .festiveHighlights > h1 {
+    font-size: 50px;
+  }
+  
+  .festiveHighlights > div {
+    gap: 4rem;
+  }
+  
+  .festiveHighlights > div > div > span {
+    font-size: 40px;
+  }
+  
+  .festiveHighlights > div > div > p {
+    font-size: 24px;
+  }
+  
+  .primaryButton {
+    padding: 18px;
+  }
+  
+  .secondaryButton {
+    padding: 12px 18px;
+  }
+  
+  .landingPage {
+    padding: 0px 20px 100px;
+  }
+}
 
-
-
+/* Large mobile devices (576px - 767px) */
 @media (max-width: 768px) {
-  .header{
+  .container {
+    padding: 0 30px;
+  }
+  
+  .header {
     margin-top: 10px;
   }
-  .festName{
+  
+  .festName {
     width: 45%;
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
-  .festTitle{
+  
+  .festTitle {
     font-size: 26px;
   }
-  .festDescription{
+  
+  .festDescription {
     margin-top: 15px;
-    width: 32rem;
+    width: 100%;
+    max-width: 32rem;
     font: 400 14px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
   }
-  .primaryButton{
+  
+  .primaryButton {
     padding: 10px;
     font: 700 14px Lexend, sans-serif;
   }
-  .secondaryButton{
+  
+  .secondaryButton {
     font: 500 12px Lexend, sans-serif;
   }
-  .actionButtons{
-    width: 20rem;
+  
+  .actionButtons {
+    width: 100%;
+    max-width: 20rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
   }
-  .eventInfo{
+  
+  .eventInfo {
     font: 500 14px Lexend, sans-serif;
+    justify-content: center;
   }
-  .eventsHeader{
+  
+  .eventsHeader {
     padding: 60px 0 0 0;
+    font-size: 50px;
   }
-  .primeEvents{
+  
+  .eventsHeader > h1 {
+    font-size: 100px;
+    margin-top: -40px;
+    -webkit-text-stroke: 2px white;
+  }
+  
+  .primeEvents {
     margin-top: 100px;
     min-width: 55%;
   }
-  .events_list_box{
+  
+  .events_list_box {
     flex-direction: column;
+    padding: 0 20px;
   }
-  .event_category_buttons{
+  
+  .event_category_buttons {
     width: 60%;
     margin: 3rem 0;
   }
-  .frontCards{
+  
+  .frontCards {
     width: 20rem;
     height: 20rem;
   }
-  .endCards{
+  
+  .endCards {
     width: 95%;
     height: 150px;
   }
-  .middleCards{
+  
+  .middleCards {
     width: 75%;
     height: 250px;
   }
-  .eventCards{
+  
+  .eventCards {
     margin-bottom: 0;
   }
-  .whyToJoinUs{
-    width: 60%;
+  
+  .whyToJoinUs {
+    width: 90%;
   }
-  .whyToJoinUs > div > h1{
+  
+  .whyToJoinUs > div > h1 {
     font-size: 45px;
   }
-  .whyToJoinUs > div > span{
+  
+  .whyToJoinUs > div > span {
     font-size: 14px;
   }
-  .whyCards{
+  
+  .whyCards {
     gap: 60px 0;
     margin-top: 2rem;
   }
-  .whyCards > div{
+  
+  .whyCards > div {
     width: 75%;
   }
-  .festiveHighlights > h1{
+  
+  .festiveHighlights {
+    margin: 3rem 1rem;
+  }
+  
+  .festiveHighlights > h1 {
     font-size: 40px;
   }
-  .festiveHighlights > div{
+  
+  .festiveHighlights > div {
     gap: 1rem;
   }
+  
+  .festiveHighlights > div > div > span {
+    font-size: 36px;
+  }
+  
+  .festiveHighlights > div > div > p {
+    font-size: 20px;
+  }
+  
+  .socialIcons {
+    gap: 30px;
+  }
+  
+  .countdownItem {
+    font-size: 40px;
+  }
+}
 
+/* Small mobile devices (480px - 575px) */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .festName {
+    width: 90%;
+    margin-top: 4rem;
+    font-size: 30px;
+  }
+  
+  .festTitle {
+    font-size: 22px;
+  }
+  
+  .festDescription {
+    font-size: 13px;
+  }
+  
+  .countdown {
+    gap: 20px;
+  }
+  
+  .countdownItem {
+    font-size: 32px;
+    letter-spacing: 1.5px;
+  }
+  
+  .eventsHeader {
+    font-size: 40px;
+  }
+  
+  .eventsHeader > h1 {
+    font-size: 80px;
+    margin-top: -30px;
+    -webkit-text-stroke: 2px white;
+  }
+  
+  .event_category_buttons {
+    width: 90%;
+  }
+  
+  .event_category_buttons button {
+    font-size: 0.8rem;
+    padding: 8px 0;
+  }
+  
+  .frontCards {
+    width: 16rem;
+    height: 16rem;
+  }
+  
+  .endCards {
+    width: 95%;
+    height: 120px;
+  }
+  
+  .middleCards {
+    width: 85%;
+    height: 180px;
+  }
+  
+  .whyToJoinUs > div > h1 {
+    font-size: 36px;
+  }
+  
+  .whyCards > div > h2 {
+    font-size: 18px;
+  }
+  
+  .whyCards > div > span {
+    font-size: 12px;
+  }
+  
+  .festiveHighlights > h1 {
+    font-size: 32px;
+  }
+  
+  .festiveHighlights > div > div > span {
+    font-size: 28px;
+  }
+  
+  .festiveHighlights > div > div > p {
+    font-size: 16px;
+  }
+  
+  .footerTitle {
+    font-size: 26px;
+  }
+  
+  .socialIcons {
+    gap: 20px;
+  }
+  
+  .copyright {
+    font-size: 12px;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .primaryButton, .secondaryButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Extra small mobile devices (less than 480px) */
+@media (max-width: 479px) {
+  .festName {
+    width: 100%;
+    font-size: 26px;
+    margin-top: 4rem;
+  }
+  
+  .festTitle {
+    font-size: 20px;
+  }
+  
+  .festDescription {
+    font-size: 12px;
+  }
+  
+  .countdownItem {
+    font-size: 28px;
+  }
+  
+  .eventsHeader {
+    font-size: 32px;
+  }
+  
+  .eventsHeader > h1 {
+    font-size: 60px;
+    margin-top: -25px;
+    -webkit-text-stroke: 1px white;
+  }
+  
+  .primeEvents {
+    min-width: 80%;
+    height: 180px;
+  }
+  
+  .frontCards {
+    width: 14rem;
+    height: 14rem;
+  }
+  
+  .endCards {
+    height: 100px;
+  }
+  
+  .middleCards {
+    height: 150px;
+  }
+  
+  .whyToJoinUs {
+    width: 95%;
+  }
+  
+  .whyToJoinUs > div > h1 {
+    font-size: 30px;
+  }
+  
+  .whyCards {
+    gap: 40px 0;
+  }
+  
+  .whyCards > div {
+    width: 90%;
+  }
+  
+  .festiveHighlights {
+    margin: 2rem 0.5rem;
+  }
+  
+  .festiveHighlights > h1 {
+    font-size: 28px;
+  }
+  
+  .festiveHighlights > div {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .festiveHighlights > div > div {
+    margin: 10px 0;
+  }
+  
+  footer > div {
+    gap: 30px;
+  }
 }

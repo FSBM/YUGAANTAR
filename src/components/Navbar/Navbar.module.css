@@ -1,53 +1,133 @@
 .header {
-    display: flex;
-    width: 100%;
-    color: #d2fc3c;
-    position: fixed;
-    font: 500 18px Lexend, sans-serif;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    justify-content: center; 
-    z-index: 10;
+  display: flex;
+  width: 100%;
+  color: #d2fc3c;
+  position: fixed;
+  font: 500 18px Lexend, sans-serif;
+  padding: 40px 20px;
+  justify-content: center; 
+  z-index: 10;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.7); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 20px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  position: absolute;
+  width: 80px; 
+  left: 40px;
+  margin-top: -5px;
+  transition: all 0.3s ease;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: auto 0;
+  justify-content: center;
+}
+
+.navLink {
+  align-self: stretch;
+  margin: auto 0;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.navLink:hover {
+  opacity: 0.8;
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .header {
+    padding: 50px 40px;
+  }
+  
+  .scrolled {
+    padding: 25px 40px;
   }
   
   .logo {
-    position: absolute;
-    width: 8%;
-    left: 40px;
-    margin-top: -10px;
+    width: 100px;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 991px) {
+  .nav {
+    gap: 40px;
+  }
+  
+  .logo {
+    left: 20px;
+  }
+  
+  .scrolled {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 14px;
+    padding: 20px 15px;
+  }
+  
+  .scrolled {
+    padding: 12px 15px;
+  }
+  
+  .logo {
+    width: 60px;
+    left: 15px;
+    margin-top: -2px;
   }
   
   .nav {
-    display: flex;
-    align-items: center;
-    gap: 40px 60px;
-    flex-wrap: wrap;
-    margin: auto 0;
+    gap: 30px;
   }
-  @media (max-width: 991px) {
-    .nav {
-      max-width: 100%;
-    }
-  }
-  
-  .navLink {
-    align-self: stretch;
-    margin: auto 0;
-    text-decoration: none;
-    color: inherit;
-  }
-  
+}
 
-  @media (max-width: 768px){
-    .nav{
-      gap: 40px;
-    }
-    .header{
-      font: 500 14px Lexend, sans-serif;
-    }
-    .logo{
-      width: 13%;
-      left: 0;
-      top: -10px;
-    }
+@media (max-width: 480px) {
+  .header {
+    font-size: 12px;
+    padding: 15px 10px;
   }
+  
+  .scrolled {
+    padding: 10px;
+  }
+  
+  .logo {
+    display: none;
+  }
+  
+  .nav {
+    gap: 20px;
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    gap: 15px;
+  }
+}

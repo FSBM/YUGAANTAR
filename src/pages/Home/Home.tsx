@@ -82,7 +82,7 @@ const YugaantarFest: React.FC = () => {
           <section className={styles.eventInfo}>
             <EventInfo
               iconSrc="./Calendar.svg"
-              text="January 1 & 2, 2025"
+              text="Coming Soon..."
               alt="Calendar icon"
             />
             <EventInfo
