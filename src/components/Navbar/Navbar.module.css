@@ -4,7 +4,8 @@
     color: #d2fc3c;
     position: fixed;
     font: 500 18px Lexend, sans-serif;
-    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     justify-content: center; 
     z-index: 10;
   }
@@ -12,8 +13,8 @@
   .logo {
     position: absolute;
     width: 8%;
-    left: 40px; 
-    top: -20px;
+    left: 40px;
+    margin-top: -10px;
   }
   
   .nav {
