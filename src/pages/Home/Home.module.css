@@ -19,7 +19,12 @@
 .festTitle {
   text-align: center;
   margin-top: 2rem;
-  font: 400 32px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
+  font: 400 50px "LC Mogi", -apple-system, Roboto, Helvetica, sans-serif;
+  line-height: 100%;
+  /* 
+  box-shadow: 4px 6px 0px 0px #000000;
+  */
+  text-shadow: 4px 6px 0px #000000;
 }
 
 .festName {
@@ -76,10 +81,18 @@
 
 .background {
   position: absolute;
-  height: auto;
-  background-color: #06061f;
-  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  height: auto;
+  z-index: 3;
+  background-image: url('../../assets/Images/BgLeft.png'), url('../../assets/Images/BgRight.png');
+  background-position: left top, right top;
+  background-repeat: repeat-y, repeat-y;
+  background-size: 50% auto, 50% auto;
+  background-origin: border-box, border-box;
+  background-clip: border-box, border-box;
 }
 
 .blue_gradient {

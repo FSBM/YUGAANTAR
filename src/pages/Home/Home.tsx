@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Home.module.css";
-// import CountdownItem from "../../components/CountDown/CountDown";
+import CountdownItem from "../../components/CountDown/CountDown";
 import EventInfo from "../../components/EventInfo/EventInfo";
-// import { useCountdownStore } from "../../store/countDown";
+import { useCountdownStore } from "../../store/countDown";
 import {
   festTitle,
   primeEvent1,
@@ -26,21 +26,21 @@ import {
 import Navbar from "../../components/Navbar/Navbar";
 
 const YugaantarFest: React.FC = () => {
-  // const { days, hours, minutes, seconds, calculateTimeLeft } =
-  //   useCountdownStore();
+  const { days, hours, minutes, seconds, calculateTimeLeft } =
+    useCountdownStore();
 
-  // useEffect(() => {
-  //   calculateTimeLeft();
-  //   const timer = setInterval(calculateTimeLeft, 1000);
-  //   return () => clearInterval(timer);
-  // }, [calculateTimeLeft]);
+  useEffect(() => {
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, [calculateTimeLeft]);
 
-  // const countdownItems = [
-  //   { value: days.toString(), label: "DAYS" },
-  //   { value: hours.toString(), label: "HOURS" },
-  //   { value: minutes.toString(), label: "MINUTES" },
-  //   { value: seconds.toString(), label: "SECONDS" },
-  // ];
+  const countdownItems = [
+    { value: days.toString(), label: "DAYS" },
+    { value: hours.toString(), label: "HOURS" },
+    { value: minutes.toString(), label: "MINUTES" },
+    { value: seconds.toString(), label: "SECONDS" },
+  ];
 
   const eventItems = [
     { value: "Tech Odyssey", imgUrl: primeEvent1 },
@@ -56,16 +56,15 @@ const YugaantarFest: React.FC = () => {
 
   return (
     <>
-      <div className={styles.background}>
+      {/* <div className={styles.background}>
         <img className={styles.blue_gradient} src="./Ellipse.svg" alt="" />
-      </div>
-      <main className={styles.landingPage}>
+      </div> */}
+      <main className={`${styles.landingPage} ${styles.background}`}>
         <Navbar />
         <div className={styles.container}>
           <img src={festTitle} className={styles.festName} />
           <h1 className={styles.festTitle}>
-            <span>Bangalore's most awaited </span>
-            <span className={styles.underlinedText}>Tech Fest</span>
+            <span>CHANGE OF ERA</span>
           </h1>
           <p className={styles.festDescription}>
             <span className={styles.highlightedText}>
@@ -93,13 +92,13 @@ const YugaantarFest: React.FC = () => {
           </section>
 
           <section className={styles.countdown}>
-            {/* {countdownItems.map((item, index) => (
+            {countdownItems.map((item, index) => (
               <CountdownItem
                 key={index}
                 value={item.value}
                 label={item.label}
               />
-            ))} */}
+            ))}
             <div className={styles.countdownItem}>Coming Soon...</div>
           </section>
         </div>

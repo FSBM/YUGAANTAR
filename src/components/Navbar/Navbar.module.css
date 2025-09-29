@@ -3,28 +3,38 @@
   width: 100%;
   color: #d2fc3c;
   position: fixed;
-  font: 500 18px Lexend, sans-serif;
+  font: 500 24px Reem Kufi Fun, sans-serif;
   padding: 40px 20px;
-  justify-content: center; 
+  justify-content: center;
   z-index: 10;
   box-sizing: border-box;
   transition: all 0.3s ease;
+  /* font shadow no spread */
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   background-color: transparent;
 }
 
 .scrolled {
-  background-color: rgba(0, 0, 0, 0.7); 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 20px; 
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #5119db 50%, #b12a36 50%);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
+
 
 .logo {
   position: absolute;
-  width: 80px; 
   left: 40px;
-  margin-top: -5px;
+  margin-top: -15px;
+  transition: all 0.3s ease;
+}
+
+.avatar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 40px;
+  margin-top: -15px;
   transition: all 0.3s ease;
 }
 
@@ -54,13 +64,18 @@
   .header {
     padding: 50px 40px;
   }
-  
+
   .scrolled {
-    padding: 25px 40px;
+    padding: 40px 20px;
   }
-  
+
   .logo {
-    width: 100px;
+    width: 166.47483825683594px;
+  }
+
+  .avatar {
+    width: 50px;
+    width: 50px;
   }
 }
 
@@ -69,13 +84,18 @@
   .nav {
     gap: 40px;
   }
-  
+
   .logo {
     left: 20px;
   }
-  
+
   .scrolled {
-    padding: 15px 20px;
+    padding: 30px 20px;
+  }
+
+  .avatar {
+    right: 10px;
+    right: 10px;
   }
 }
 
@@ -84,19 +104,26 @@
     font-size: 14px;
     padding: 20px 15px;
   }
-  
+
   .scrolled {
-    padding: 12px 15px;
+    padding: 20px 15px;
   }
-  
+
   .logo {
     width: 60px;
     left: 15px;
     margin-top: -2px;
   }
-  
+
   .nav {
     gap: 30px;
+  }
+
+  .avatar {
+    width: 30px;
+    width: 30px;
+    right: 15px;
+    margin-top: -2px;
   }
 }
 
@@ -105,21 +132,25 @@
     font-size: 12px;
     padding: 15px 10px;
   }
-  
+
   .scrolled {
     padding: 10px;
   }
-  
+
   .logo {
     display: none;
   }
-  
+
+  .avatar {
+    display: none;
+  }
+
   .nav {
     gap: 20px;
     width: 100%;
     justify-content: space-around;
   }
-  
+
   .header {
     flex-direction: column;
     align-items: center;
