@@ -9,8 +9,7 @@
   z-index: 10;
   box-sizing: border-box;
   transition: all 0.3s ease;
-  /* font shadow no spread */
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+  text-shadow: 2px 1px 0px rgba(0, 0, 0, 1);
   background-color: transparent;
 }
 
@@ -81,12 +80,17 @@
 
 /* Medium screens */
 @media (max-width: 991px) {
+  .header {
+    font-size: 14px;
+  }
+
   .nav {
     gap: 40px;
   }
 
   .logo {
     left: 20px;
+    height: 30px;
   }
 
   .scrolled {
@@ -95,13 +99,13 @@
 
   .avatar {
     right: 10px;
-    right: 10px;
+    height: 30px;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    font-size: 14px;
+    font-size: 12px;
     padding: 20px 15px;
   }
 
