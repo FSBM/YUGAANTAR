@@ -20,7 +20,8 @@ import {
   Instagram,
   Youtube,
   Discord,
-  Globe
+  Globe,
+  Street
 } from "../../assets/Images";
 
 import Navbar from "../../components/Navbar/Navbar";
@@ -67,29 +68,23 @@ const YugaantarFest: React.FC = () => {
             <span>CHANGE OF ERA</span>
           </h1>
           <p className={styles.festDescription}>
-            <span className={styles.highlightedText}>
-              Scaler School of Technology's{" "}
-            </span>
-            premier Technology and Cultural Festival with live events, exciting
-            prize pools and networking opportunities with top industry
-            professionals.
+            Scaler School of Technology's premier Technology and Cultural Festival with live events, exciting prize pools and networking opportunities with top industry professionals.
           </p>
-          <div className={styles.actionButtons}>
-            <button className={styles.primaryButton}>Book Tickets</button>
-            <button className={styles.secondaryButton}>Explore Events</button>
-          </div>
           <section className={styles.eventInfo}>
             <EventInfo
               iconSrc="./Calendar.svg"
-              text="Coming Soon..."
+              text="November 1 & 2, 2025"
               alt="Calendar icon"
             />
             <EventInfo
               iconSrc="./MapPin.svg"
-              text="Scaler Campus, Electronic City"
+              text="SST Campus, Electronic City"
               alt="Location icon"
             />
           </section>
+          <div className={styles.actionButtons}>
+            <button className={styles.primaryButton}>Register Now</button>
+          </div>
 
           <section className={styles.countdown}>
             {countdownItems.map((item, index) => (
@@ -99,12 +94,11 @@ const YugaantarFest: React.FC = () => {
                 label={item.label}
               />
             ))}
-            <div className={styles.countdownItem}>Coming Soon...</div>
           </section>
         </div>
         <section className={styles.eventsHeader}>
           <h6>EXPERIENCE THE</h6>
-          <h1>FUTURE</h1>
+          <img src={Street} alt="Street" />
         </section>
 
         <section className={styles.events_display}>

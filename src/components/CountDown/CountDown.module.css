@@ -1,9 +1,24 @@
 .countdownItem {
-  border-radius: 0;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
   align-self: stretch;
+  background-color: #FFF4C7;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: auto 0;
+  color: #2D0000;
+  transition: transform 0.3s ease-out;
+}
+
+.countdownItem:nth-child(odd) {
+  transform: rotate(5deg);
+}
+
+.countdownItem:nth-child(even) {
+  transform: rotate(-5deg);
 }
 
 @media (max-width: 991px) {
@@ -13,9 +28,9 @@
 }
 
 .countdownValue {
-  letter-spacing: 2.5px;
-  align-self: center;
-  font: 400 46px Monomaniac One, -apple-system, Roboto, Helvetica, sans-serif;
+  letter-spacing: 5%;
+  text-align: center;
+  font: 400 50px LC Mogi, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 @media (max-width: 991px) {
@@ -25,5 +40,6 @@
 }
 
 .countdownLabel {
-  font: 500 16px Source Sans Pro, -apple-system, Roboto, Helvetica, sans-serif;
+  text-align: center;
+  font: 600 20px Reem Kufi Fun, -apple-system, Roboto, Helvetica, sans-serif;
 }

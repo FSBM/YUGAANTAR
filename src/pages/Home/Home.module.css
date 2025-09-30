@@ -18,7 +18,7 @@
 
 .festTitle {
   text-align: center;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   font: 400 50px "LC Mogi", -apple-system, Roboto, Helvetica, sans-serif;
   line-height: 100%;
   /* 
@@ -31,21 +31,22 @@
   color: #d2fc3c;
   text-align: center;
   margin-top: 8rem;
-  width: 45%;
+  width: 700px;
 }
 
 .festDescription {
   text-align: center;
   margin-top: 40px;
-  width: 44rem;
+  width: 1269px; 
   max-width: 100%;
-  font: 400 18px "Source Sans 3", -apple-system, Roboto, Helvetica, sans-serif;
+  height: 84px;
+  text-shadow: 0px 4px 4px #000000B2;
+  font: 600 28px "Reem Kufi Fun", -apple-system, Roboto, Helvetica, sans-serif;
 }
 
 .actionButtons {
   display: flex;
   margin-top: 3rem;
-  margin-bottom: 5rem;
   justify-content: space-around;
   width: 30rem;
   max-width: 100%;
@@ -53,10 +54,10 @@
 
 .primaryButton {
   border-radius: 10px;
-  background-color: #d2fc3c;
-  padding: 14px 58px;
+  background-color: #EECE00;
+  padding: 20px 61px;
   color: #06061f;
-  font: 700 16px Lexend, sans-serif;
+  font: 700 24px Lexend, sans-serif;
   border: none;
   cursor: pointer;
 }
@@ -74,6 +75,7 @@
 .eventInfo {
   display: flex;
   max-width: 100%;
+  margin-top: 40px;
   gap: 20px;
   flex-wrap: wrap;
   font: 500 18px Lexend, sans-serif;
@@ -153,16 +155,12 @@
 .eventsHeader > h6 {
   position: relative;
   z-index: 4;
+  font: 400 57.88px LC Mogi, sans-serif;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
 }
 
-.eventsHeader > h1 {
-  font-size: 200px;
-  margin-top: -80px;
-  color: transparent;
-  -webkit-text-stroke: 4px white;
-  position: relative;
-  z-index: 3;
-}
 
 .events_display {
   display: flex;
@@ -689,8 +687,7 @@ footer > div {
   .actionButtons {
     width: 100%;
     max-width: 20rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-top: 40px;
   }
   
   .eventInfo {
