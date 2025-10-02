@@ -105,11 +105,12 @@ const YugaantarFest: React.FC = () => {
           <div className={styles.events_list_box}>
             {eventItems.map((item, index) => (
               <div key={index} className={styles.primeEvents}>
-                <img src={item.imgUrl} />
+                <img src={item.imgUrl} alt={item.value} />
                 <span>{item.value}</span>
               </div>
             ))}
           </div>
+
 
           <div className={styles.event_category_buttons}>
             <div

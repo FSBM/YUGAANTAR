@@ -21,25 +21,81 @@
   transform: rotate(-5deg);
 }
 
-@media (max-width: 991px) {
-  .countdownItem {
-    white-space: initial;
-  }
-}
-
 .countdownValue {
   letter-spacing: 5%;
   text-align: center;
   font: 400 50px LC Mogi, -apple-system, Roboto, Helvetica, sans-serif;
 }
 
-@media (max-width: 991px) {
-  .countdownValue {
-    font-size: 36px;
-  }
-}
-
 .countdownLabel {
   text-align: center;
   font: 600 20px Reem Kufi Fun, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* all devices */
+/* 
+@media (min-width: 1200px) {
+@media (max-width: 1199px) {
+@media (max-width: 991px) {
+@media (max-width: 768px) {
+@media (max-width: 575px) {
+@media (max-width: 479px) {
+*/
+
+/* all devices */
+@media (min-width: 1200px) {
+  .countdownItem {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Large screens (992px and above) */
+@media (max-width: 991px) {
+  .countdownItem {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Medium screens (768px and above) */
+@media (max-width: 768px) {
+  .countdownItem {
+    width: 90px;
+    height: 90px;
+  }
+  .countdownValue {
+    font-size: 36px;
+  }
+  .countdownLabel {
+    font-size: 16px;
+  }
+}
+
+/* Extra small mobile devices (less than 768px) */
+@media (max-width: 575px) {
+  .countdownItem {
+    width: 80px;
+    height: 80px;
+  }
+  .countdownValue {
+    font-size: 32px;
+  }
+  .countdownLabel {
+    font-size: 14px;
+  }
+}
+
+/* Small screens (480px and above) */
+@media (max-width: 479px) {
+  .countdownItem {
+    width: 60px;
+    height: 60px;
+  }
+  .countdownValue {
+    font-size: 28px;
+  }
+  .countdownLabel {
+    font-size: 10px;
+  }
 }

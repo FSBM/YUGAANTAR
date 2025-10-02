@@ -17,3 +17,43 @@
   flex-basis: auto;
   margin: auto 0;
 }
+
+
+/* all devices */
+@media (min-width: 1200px) {
+  .infoItem {
+    font-size: 32px;
+  }
+}
+
+/* Large screens (992px and above) */
+@media (max-width: 1199px) {
+  .infoItem {
+    font-size: 28px;
+  }
+}
+
+/* Medium screens (768px and above) */
+@media (max-width: 991px) {
+  .infoItem {
+    font-size: 24px;
+  }
+}
+
+/* Small screens (480px and above) */
+@media (max-width: 768px) {
+  .infoIcon {
+    width: 24px;
+  }
+  .infoItem {
+    font-size: 20px;
+  }
+}
+
+/* Extra small mobile devices (less than 480px) */
+@media (max-width: 479px) {
+  .infoItem {
+    font-size: 16px;
+  }
+}
+
