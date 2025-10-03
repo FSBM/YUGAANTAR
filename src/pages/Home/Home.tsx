@@ -73,7 +73,7 @@ const YugaantarFest: React.FC = () => {
           <section className={styles.eventInfo}>
             <EventInfo
               iconSrc="./Calendar.svg"
-              text="November 1 & 2, 2025"
+              text="November 28, 2025"
               alt="Calendar icon"
             />
             <EventInfo
@@ -121,7 +121,7 @@ const YugaantarFest: React.FC = () => {
             <button onClick={() => handleButtonClick(1)}>
               Cultural Events
             </button>
-            <button onClick={() => handleButtonClick(2)}>Post Shows</button>
+            <button onClick={() => handleButtonClick(2)}>Pro Shows</button>
           </div>
 
           <div className={styles.eventCards}>

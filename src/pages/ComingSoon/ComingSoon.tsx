@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ComingSoon.module.css";
 import Navbar from "../../components/Navbar/Navbar";
-import { festTitle } from "../../assets/Images";
+import { festTitle, lockedIcon } from "../../assets/Images";
 
 const ComingSoon: React.FC = () => {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const ComingSoon: React.FC = () => {
                 This page will unlock soon
               </p>
             </div>
-
+            <img src={lockedIcon} alt="Locked Icon" className={styles.lockIcon} />
             <button onClick={handleGoHome} className={styles.homeButton}>
               Go back to home page
             </button>

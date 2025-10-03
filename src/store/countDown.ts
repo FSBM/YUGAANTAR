@@ -9,10 +9,9 @@ interface CountdownStore {
 }
 
 const calculateTimeDifference = () => {
-  const targetDate = new Date('November 1, 2025').getTime();
+  const targetDate = new Date('November 28, 2025').getTime();
   const now = new Date().getTime();
   const difference = targetDate - now;
-// should return 0 if target date is passed
   return {
     days: difference > 0 ? Math.floor(difference / (1000 * 60 * 60 * 24)) : 0,
     hours: difference > 0 ? Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) : 0,

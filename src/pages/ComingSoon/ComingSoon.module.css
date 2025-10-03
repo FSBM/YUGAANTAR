@@ -37,7 +37,7 @@
 .festName {
   color: #FFCA3E;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 9rem;
   width: 700px;
   max-width: 90%;
 }
@@ -50,14 +50,20 @@
   max-width: 800px;
 }
 
+.lockIcon {
+  width: 120px;
+  margin-bottom: -2rem;
+  opacity: 0.9;
+}
+
 .comingSoonTitle {
   text-align: center;
-  font: 400 80px "LC Mogi", -apple-system, Roboto, Helvetica, sans-serif;
+  font: 300 50px "LC Mogi", -apple-system, Roboto, Helvetica, sans-serif;
   line-height: 100%;
 }
 
 .gradientText {
-  background: linear-gradient(45deg, #FFCA3E, #F5449E, #7fd5ff);
+  background: #FFCA3E;
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -114,6 +120,11 @@
     width: 80%;
   }
 
+  .lockIcon {
+    width: 110px;
+    height: 110px;
+  }
+
   .comingSoonTitle {
     font-size: 70px;
   }
@@ -126,6 +137,11 @@
 @media (max-width: 991px) {
   .container {
     padding: 0 40px;
+  }
+
+  .lockIcon {
+    width: 100px;
+    height: 100px;
   }
 
   .comingSoonTitle {
@@ -150,6 +166,12 @@
   .festName {
     width: 90%;
     margin-top: 6rem;
+  }
+
+  .lockIcon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
   }
 
   .comingSoonTitle {
@@ -181,6 +203,12 @@
     margin-top: 5rem;
   }
 
+  .lockIcon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+
   .comingSoonTitle {
     font-size: 36px;
   }
@@ -199,6 +227,12 @@
   .festName {
     width: 100%;
     margin-top: 4rem;
+  }
+
+  .lockIcon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
   }
 
   .comingSoonTitle {

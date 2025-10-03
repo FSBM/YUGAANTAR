@@ -10,6 +10,7 @@ export { default as Trophy } from './Trophy.svg'
 export { default as BriefCase } from './BriefCase.svg'
 export { default as Participants } from './Participants.svg'
 export { default as Profile_Avatar } from './Profile_Avatar.svg'
+export { default as lockedIcon } from './locked.png'
 
 // Icons
 export { default as X } from './X.svg'
