@@ -21,7 +21,13 @@ import {
   Youtube,
   Discord,
   Globe,
-  Street
+  Street,
+  tech_fest_1,
+  tech_fest_2,
+  tech_fest_3,
+  tech_fest_4,
+  tech_fest_5,
+  tech_fest_6
 } from "../../assets/Images";
 
 import Navbar from "../../components/Navbar/Navbar";
@@ -49,10 +55,132 @@ const YugaantarFest: React.FC = () => {
     { value: "Music Revolution", imgUrl: primeEvent3 },
   ];
 
+  // Event data for different categories
+  const eventData = {
+    techEvents: [
+      { 
+        id: 1, 
+        title: "Code Quest", 
+        image: tech_fest_1,
+        description: "Competitive Programming Challenge"
+      },
+      { 
+        id: 2, 
+        title: "Tech Odyssey", 
+        image: tech_fest_3,
+        description: "Innovation & Technology Showcase"
+      },
+      { 
+        id: 3, 
+        title: "AI Workshop", 
+        image: tech_fest_2,
+        description: "Artificial Intelligence Deep Dive"
+      },
+      { 
+        id: 4, 
+        title: "Hackathon", 
+        image: tech_fest_4,
+        description: "24-hour Coding Marathon"
+      },
+      { 
+        id: 5, 
+        title: "Web Dev Contest", 
+        image: tech_fest_5,
+        description: "Frontend & Backend Challenge"
+      },
+      { 
+        id: 6, 
+        title: "Machine Learning Workshop", 
+        image: tech_fest_6,
+        description: "Deep Learning & AI Applications"
+      }
+    ],
+    culturalEvents: [
+      { 
+        id: 6, 
+        title: "Music Revolution", 
+        image: primeEvent3,
+        description: "Battle of the Bands"
+      },
+      { 
+        id: 7, 
+        title: "Dance Battle", 
+        image: Street,
+        description: "Street & Classical Dance Competition"
+      },
+      { 
+        id: 8, 
+        title: "Art Exhibition", 
+        image: TechTalks,
+        description: "Digital & Traditional Art Showcase"
+      },
+      { 
+        id: 9, 
+        title: "Drama Competition", 
+        image: Networking,
+        description: "Stage Performance Challenge"
+      },
+      { 
+        id: 10, 
+        title: "Poetry Slam", 
+        image: Globe,
+        description: "Creative Writing & Performance"
+      }
+    ],
+    proShows: [
+      { 
+        id: 11, 
+        title: "Gaming Arena", 
+        image: primeEvent2,
+        description: "Professional Gaming Tournament"
+      },
+      { 
+        id: 12, 
+        title: "Celebrity Talk", 
+        image: TechTalks,
+        description: "Industry Expert Sessions"
+      },
+      { 
+        id: 13, 
+        title: "Concert Night", 
+        image: primeEvent3,
+        description: "Live Music Performance"
+      },
+      { 
+        id: 14, 
+        title: "Stand-up Comedy", 
+        image: Street,
+        description: "Professional Comedy Show"
+      },
+      { 
+        id: 15, 
+        title: "Fashion Show", 
+        image: Globe,
+        description: "Designer Fashion Showcase"
+      }
+    ]
+  };
+
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [currentEvents, setCurrentEvents] = useState(eventData.techEvents);
 
   const handleButtonClick = (index: number) => {
     setActiveIndex(index);
+    
+    // Update events based on selected category
+    switch(index) {
+      case 0:
+        setCurrentEvents(eventData.techEvents);
+        break;
+      case 1:
+        setCurrentEvents(eventData.culturalEvents);
+        break;
+      case 2:
+        setCurrentEvents(eventData.proShows);
+        break;
+      default:
+        setCurrentEvents(eventData.techEvents);
+    }
   };
 
   return (
@@ -117,24 +245,77 @@ const YugaantarFest: React.FC = () => {
               className={styles.moving_background}
               style={{ transform: `translateX(${activeIndex * 107.5}%)` }}
             ></div>
-            <button onClick={() => handleButtonClick(0)}>Tech Events</button>
-            <button onClick={() => handleButtonClick(1)}>
+            <button 
+              onClick={() => handleButtonClick(0)}
+              className={activeIndex === 0 ? styles.active : ''}
+            >
+              Tech Events
+            </button>
+            <button 
+              onClick={() => handleButtonClick(1)}
+              className={activeIndex === 1 ? styles.active : ''}
+            >
               Cultural Events
             </button>
-            <button onClick={() => handleButtonClick(2)}>Pro Shows</button>
+            <button 
+              onClick={() => handleButtonClick(2)}
+              className={activeIndex === 2 ? styles.active : ''}
+            >
+              Pro Shows
+            </button>
           </div>
 
-          <div className={styles.eventCards}>
+          <div className={styles.eventCards} key={activeIndex}>
             <div className={styles.endCards}>
-              <div></div>
-              <div></div>
+              <div 
+                className={styles.eventCard}
+                style={{ 
+                  backgroundImage: `url(${currentEvents[0]?.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+              </div>
+              <div 
+                className={styles.eventCard}
+                style={{ 
+                  backgroundImage: `url(${currentEvents[1]?.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+              </div>
             </div>
             <div className={styles.middleCards}>
-              <div></div>
-              <div></div>
+              <div 
+                className={styles.eventCard}
+                style={{ 
+                  backgroundImage: `url(${currentEvents[2]?.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+              </div>
+              <div 
+                className={styles.eventCard}
+                style={{ 
+                  backgroundImage: `url(${currentEvents[3]?.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+              </div>
             </div>
             <div className={styles.frontCards}>
-              <div></div>
+              <div 
+                className={styles.eventCard}
+                style={{ 
+                  backgroundImage: `url(${currentEvents[4]?.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+              </div>
             </div>
           </div>
         </section>
@@ -212,12 +393,19 @@ const YugaantarFest: React.FC = () => {
           <div>
             <div className={styles.footerTitle}>Connect with us</div>
             <div className={styles.socialIcons}>
-              <img src={X} alt="X" />
-              <img src={LinkedIn} alt="LinkedIn" />
-              <img src={Instagram} alt="Instagram" />
-              <img src={Youtube} alt="Youtube" />
+              <img src={X} alt="X" onClick={
+                () => window.open('https://x.com/Scaler_SST', '_blank')
+              }/>
+              <img src={LinkedIn} alt="LinkedIn" onClick={
+                () => window.open('https://www.linkedin.com/in/yugaantar-sst/', '_blank')
+              }/>
+              <img src={Instagram} alt="Instagram" onClick={
+                () => window.open('https://www.instagram.com/yugaantar.sst', '_blank')
+              }/>
+              <img src={Youtube} alt="Youtube" onClick={
+                () => window.open('https://www.youtube.com/@ScalerSchoolOfTechnology', '_blank')
+              }/>
               <img src={Discord} alt="Discord" />
-              <img src={Globe} alt="Globe" />
             </div>
             <div className={styles.copyright}>© 2024 Yugantar Fest. All rights reserved.</div>
           </div>

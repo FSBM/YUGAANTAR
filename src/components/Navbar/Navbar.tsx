@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import { festTitle } from '../../assets/Images';
 import { Profile_Avatar } from '../../assets/Images';
@@ -6,6 +7,12 @@ import { Profile_Avatar } from '../../assets/Images';
 const Navbar: React.FC = () => {
     const navItems = ['Events', 'Timeline', 'Merch', 'About Us', 'Contact Us'];
     const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
+    
+    const getRouteForItem = (item: string) => {
+        const route = item.toLowerCase().replace(' ', '-');
+        return `/${route}`;
+    };
     
     useEffect(() => {
         const handleScroll = () => {
@@ -26,17 +33,22 @@ const Navbar: React.FC = () => {
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
             <img 
-                onClick={() => window.location.href = '/'}
+                onClick={() => navigate('/')}
                 loading="lazy" 
                 src={festTitle} 
                 alt="Yugaantar Fest Logo" 
                 className={styles.logo} 
+                style={{ cursor: 'pointer' }}
             />
             <nav className={styles.nav}>
                 {navItems.map((item, index) => (
-                    <a key={index} href={`${item.toLowerCase().replace(' ', '-')}`} className={styles.navLink}>
+                    <Link 
+                        key={index} 
+                        to={getRouteForItem(item)} 
+                        className={styles.navLink}
+                    >
                         {item}
-                    </a>
+                    </Link>
                 ))}
             </nav>
             <img loading="lazy" className={styles.avatar} src={Profile_Avatar} alt="Avatar" />

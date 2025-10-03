@@ -11,6 +11,12 @@ export { default as BriefCase } from './BriefCase.svg'
 export { default as Participants } from './Participants.svg'
 export { default as Profile_Avatar } from './Profile_Avatar.svg'
 export { default as lockedIcon } from './locked.png'
+export {default as tech_fest_1} from './tech_v1.png'
+export {default as tech_fest_2} from './tech_v2.png'
+export {default as tech_fest_3} from './tech_v3.png'
+export {default as tech_fest_4} from './tech_v4.png'
+export {default as tech_fest_5} from './tech_v5.jpeg'
+export {default as tech_fest_6} from './tech_v6.png'
 
 // Icons
 export { default as X } from './X.svg'

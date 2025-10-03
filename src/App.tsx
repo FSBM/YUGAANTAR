@@ -12,11 +12,16 @@ const App: React.FC = () =>{
       <Routes>
         <Route path = '/' element = { <Home/> }/>
         <Route path = '/contact' element = { <ContactUs/> }/>
+        <Route path = '/contact-us' element = { <ContactUs/> }/>
+        <Route path = '/about-us' element = { <ComingSoon/> }/>
+        <Route path = '/timeline' element = { <ComingSoon/> }/>
         <Route path = '/coming-soon' element = { <ComingSoon/> }/>
         <Route path="/404" element={<PageNotFound />} />
         <Route path="/events" element={<ComingSoon />}/>
         <Route path='/merch' element={<ComingSoon/>}/>
         {/* <Route path='/dashboard' element={<Dashboard/>}/> */}
+        {/* Catch all route for undefined paths */}
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
   );
