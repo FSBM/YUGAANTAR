@@ -1,0 +1,220 @@
+.comingSoonPage {
+  background-color: #06061f;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.background {
+  position: relative;
+  background-image: url('../../assets/Images/BgLeft.png'), url('../../assets/Images/BgRight.png');
+  background-position: left top, right top;
+  background-repeat: repeat-y, repeat-y;
+  background-size: 50% auto, 50% auto;
+  background-origin: border-box, border-box;
+  background-clip: border-box, border-box;
+}
+
+.container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  padding: 0 40px;
+  z-index: 3;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: calc(100vh - 200px);
+  justify-content: center;
+}
+
+.festName {
+  color: #FFCA3E;
+  text-align: center;
+  margin-top: 10rem;
+  width: 700px;
+  max-width: 90%;
+}
+
+.comingSoonContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.comingSoonTitle {
+  text-align: center;
+  font: 400 80px "LC Mogi", -apple-system, Roboto, Helvetica, sans-serif;
+  line-height: 100%;
+}
+
+.gradientText {
+  background: linear-gradient(45deg, #FFCA3E, #F5449E, #7fd5ff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.messageContainer {
+  text-align: center;
+  max-width: 600px;
+}
+
+.mainMessage {
+  font: 600 32px "Reem Kufi Fun", -apple-system, Roboto, Helvetica, sans-serif;
+  text-shadow: 0px 4px 4px #000000B2;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.homeButton {
+  border-radius: 10px;
+  background-color: #EECE00;
+  padding: 20px 40px;
+  color: #06061f;
+  font: 700 24px Lexend, sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(238, 206, 0, 0.3);
+}
+
+.homeButton:hover {
+  background-color: #FFCA3E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(238, 206, 0, 0.4);
+}
+
+.homeButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1199px) {
+  .festName {
+    width: 80%;
+  }
+
+  .comingSoonTitle {
+    font-size: 70px;
+  }
+
+  .mainMessage {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .comingSoonTitle {
+    font-size: 60px;
+  }
+
+  .mainMessage {
+    font-size: 24px;
+  }
+
+  .homeButton {
+    padding: 18px 35px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .festName {
+    width: 90%;
+    margin-top: 6rem;
+  }
+
+  .comingSoonTitle {
+    font-size: 48px;
+    margin: 1.5rem 0;
+  }
+
+  .mainMessage {
+    font-size: 22px;
+  }
+
+  .messageContainer {
+    margin: 2rem 0;
+  }
+
+  .homeButton {
+    padding: 16px 30px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .festName {
+    width: 95%;
+    margin-top: 5rem;
+  }
+
+  .comingSoonTitle {
+    font-size: 36px;
+  }
+
+  .mainMessage {
+    font-size: 20px;
+  }
+
+  .homeButton {
+    padding: 14px 25px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 479px) {
+  .festName {
+    width: 100%;
+    margin-top: 4rem;
+  }
+
+  .comingSoonTitle {
+    font-size: 30px;
+  }
+
+  .mainMessage {
+    font-size: 18px;
+  }
+
+  .messageContainer {
+    margin: 1.5rem 0;
+  }
+
+  .homeButton {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
