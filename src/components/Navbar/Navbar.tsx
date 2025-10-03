@@ -25,7 +25,13 @@ const Navbar: React.FC = () => {
     
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-            <img loading="lazy" src={festTitle} alt="Yugaantar Fest Logo" className={styles.logo} />
+            <img 
+                onClick={() => window.location.href = '/'}
+                loading="lazy" 
+                src={festTitle} 
+                alt="Yugaantar Fest Logo" 
+                className={styles.logo} 
+            />
             <nav className={styles.nav}>
                 {navItems.map((item, index) => (
                     <a key={index} href={`${item.toLowerCase().replace(' ', '-')}`} className={styles.navLink}>

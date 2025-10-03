@@ -5,6 +5,7 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import PageNotFound from './pages/PageNotFound/PageNotFound'
 import Events from './pages/Events/Events';
 import Merch from './pages/Merch/Merch';
+import ComingSoon from './pages/ComingSoon/ComingSoon';
 // import Dashboard from './pages/Dashboard/Dashboard';
 
 const App: React.FC = () =>{
@@ -13,6 +14,7 @@ const App: React.FC = () =>{
       <Routes>
         <Route path = '/' element = { <Home/> }/>
         <Route path = '/contact' element = { <ContactUs/> }/>
+        <Route path = '/coming-soon' element = { <ComingSoon/> }/>
         <Route path="*" element={<PageNotFound />} />
         <Route path="/events" element={<Events/>}/>
         <Route path='/merch' element={<Merch/>}/>
