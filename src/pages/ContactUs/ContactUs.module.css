@@ -180,7 +180,182 @@
   font-weight: 700;
   color: #FDE6F3;
   text-align: center;
+  margin-bottom: 50px;
+}
+
+
+.keyContacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
   margin-bottom: 40px;
+}
+
+.contactCard {
+  background-image: url('../../assets/Images/cardBG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.contactCardLeft {
+  background-image: url('../../assets/Images/cardBG_2.png');
+}
+
+.contactCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 204, 0, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contactHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 204, 0, 0.2);
+}
+
+.contactHeader h3 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #FFCC00;
+  margin: 0;
+}
+
+.contactBadge {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.personInfo h4 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 5px 0;
+}
+
+.personInfo .title {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  color: #7fd5ff;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: none;
+}
+
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #1a2040;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.contactMethod:hover {
+  background: #243055;
+  border-color: rgba(255, 204, 0, 0.3);
+  color: #FFCC00;
+}
+
+.contactMethod .icon {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* Department Contacts */
+.departmentContacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.deptCard {
+  background-image: url('../../assets/Images/cardBG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(127, 213, 255, 0.2);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.deptCardLeft {
+  background-image: url('../../assets/Images/cardBG_2.png');
+}
+
+.deptCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(127, 213, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.deptCard h3 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 15px 0;
+}
+
+.emailLink {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #1a2040;
+  border: 1px solid rgba(127, 213, 255, 0.2);
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  word-break: break-all;
+}
+
+.emailLink:hover {
+  background: #243055;
+  border-color: rgba(127, 213, 255, 0.4);
+  color: #7fd5ff;
+  transform: translateY(-1px);
 }
 
 .infoGrid {
@@ -190,19 +365,21 @@
 }
 
 .infoCard {
-  background: linear-gradient(135deg, rgba(2, 23, 60, 0.8), rgba(6, 6, 31, 0.8));
-  border: 2px solid rgba(255, 204, 0, 0.2);
+  background-image: url('../../assets/Images/cardBG.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(255, 204, 0, 0.2);
   border-radius: 16px;
   padding: 30px;
   text-align: center;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
 }
 
 .infoCard:hover {
   transform: translateY(-5px);
-  border-color: #FFCC00;
-  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.2);
+  border-color: rgba(255, 204, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .infoCard h3 {
@@ -468,20 +645,22 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
-  background: linear-gradient(135deg, rgba(255, 204, 0, 0.1), rgba(245, 68, 158, 0.1));
-  border: 2px solid rgba(255, 204, 0, 0.3);
+  background-color: #e1b502;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(255, 204, 0, 0.2);
   border-radius: 12px;
   padding: 20px;
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease;
-  backdrop-filter: blur(5px);
 }
 
 .socialIcon:hover {
   transform: translateY(-3px);
-  border-color: #FFCC00;
-  box-shadow: 0 8px 25px rgba(255, 204, 0, 0.3);
+  border-color: rgba(255, 204, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .socialIcon img {
@@ -546,6 +725,16 @@
     gap: 15px;
   }
   
+  .keyContacts {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .departmentContacts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
   .locationContent {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -584,6 +773,38 @@
   .faqSection h2,
   .socialSection h2 {
     font-size: 32px;
+  }
+  
+  .keyContacts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contactCard {
+    padding: 25px;
+  }
+  
+  .contactHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .contactDetails {
+    gap: 15px;
+  }
+  
+  .contactMethods {
+    gap: 10px;
+  }
+  
+  .departmentContacts {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .deptCard {
+    padding: 20px;
   }
   
   .infoGrid,

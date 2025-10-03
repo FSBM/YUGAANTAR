@@ -31,28 +31,51 @@ const Navbar: React.FC = () => {
     }, []);
     
     return (
-        <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
-            <img 
-                onClick={() => navigate('/')}
-                loading="lazy" 
-                src={festTitle} 
-                alt="Yugaantar Fest Logo" 
-                className={styles.logo} 
-                style={{ cursor: 'pointer' }}
-            />
-            <nav className={styles.nav}>
-                {navItems.map((item, index) => (
-                    <Link 
-                        key={index} 
-                        to={getRouteForItem(item)} 
-                        className={styles.navLink}
-                    >
-                        {item}
-                    </Link>
-                ))}
-            </nav>
-            <img loading="lazy" className={styles.avatar} src={Profile_Avatar} alt="Avatar" />
-        </header>
+        <>
+            {/* SVG Filter for Liquid Glass Effect */}
+            <svg width="0" height="0" style={{ position: 'absolute' }}>
+                <defs>
+                    <filter id="liquid-glass-filter">
+                        <feTurbulence 
+                            type="fractalNoise" 
+                            baseFrequency="0.02" 
+                            numOctaves="3" 
+                            result="noise" 
+                        />
+                        <feDisplacementMap 
+                            in="SourceGraphic" 
+                            in2="noise" 
+                            scale="8" 
+                            xChannelSelector="R" 
+                            yChannelSelector="G" 
+                        />
+                    </filter>
+                </defs>
+            </svg>
+            
+            <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+                <img 
+                    onClick={() => navigate('/')}
+                    loading="lazy" 
+                    src={festTitle} 
+                    alt="Yugaantar Fest Logo" 
+                    className={styles.logo} 
+                    style={{ cursor: 'pointer' }}
+                />
+                <nav className={styles.nav}>
+                    {navItems.map((item, index) => (
+                        <Link 
+                            key={index} 
+                            to={getRouteForItem(item)} 
+                            className={styles.navLink}
+                        >
+                            {item}
+                        </Link>
+                    ))}
+                </nav>
+                <img loading="lazy" className={styles.avatar} src={Profile_Avatar} alt="Avatar" />
+            </header>
+        </>
     );
 };
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./ContactUs.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import {
@@ -10,100 +10,15 @@ import {
   Globe,
 } from "../../assets/Images";
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  category: string;
-  message: string;
-}
 
 const ContactUs: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    category: "",
-    message: ""
-  });
+ 
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
+  
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitMessage("Thank you for your message! We'll get back to you soon.");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        category: "",
-        message: ""
-      });
-      setIsSubmitting(false);
-      
-      // Clear success message after 5 seconds
-      setTimeout(() => setSubmitMessage(""), 5000);
-    }, 1000);
-  };
 
-  const contactInfo = [
-    {
-      title: "General Enquiries",
-      details: ["info@yugaantarfest.com", "+91 98765 43210"]
-    },
-    {
-      title: "Event Registration",
-      details: ["registration@yugaantarfest.com", "+91 98765 43211"]
-    },
-    {
-      title: "Sponsorship",
-      details: ["sponsors@yugaantarfest.com", "+91 98765 43212"]
-    },
-    {
-      title: "Media & Press",
-      details: ["media@yugaantarfest.com", "+91 98765 43213"]
-    }
-  ];
 
-  const teamMembers = [
-    {
-      name: "Anish Yadav",
-      role: "Festival Director",
-      email: "anish@yugaantarfest.com",
-      phone: "+91 98765 43220"
-    },
-    {
-      name: "Priya Sharma",
-      role: "Tech Events Coordinator",
-      email: "priya@yugaantarfest.com",
-      phone: "+91 98765 43221"
-    },
-    {
-      name: "Rohit Kumar",
-      role: "Cultural Events Head",
-      email: "rohit@yugaantarfest.com",
-      phone: "+91 98765 43222"
-    },
-    {
-      name: "Sneha Patel",
-      role: "Sponsorship Manager",
-      email: "sneha@yugaantarfest.com",
-      phone: "+91 98765 43223"
-    }
-  ];
 
   return (
     <div className={`${styles.contactPage} ${styles.background}`}>
@@ -210,15 +125,68 @@ const ContactUs: React.FC = () => {
         {/* Contact Information Section */}
         <section className={styles.contactInfo}>
           <h2>Contact Information</h2>
-          <div className={styles.infoGrid}>
-            {contactInfo.map((info, index) => (
-              <div key={index} className={styles.infoCard}>
-                <h3>{info.title}</h3>
-                {info.details.map((detail, detailIndex) => (
-                  <p key={detailIndex}>{detail}</p>
-                ))}
+          
+          {/* Key Contacts */}
+          <div className={styles.keyContacts}>
+            <div className={`${styles.contactCard} ${styles.contactCardLeft}`}>
+              <div className={styles.contactHeader}>
+                <h3>Fest Council</h3>
               </div>
-            ))}
+              <div className={styles.contactDetails}>
+                <div className={styles.personInfo}>
+                  <h4>Gowtham Sai Yadav</h4>
+                  <p className={styles.title}>Fest Chairperson</p>
+                </div>
+                <div className={styles.contactMethods}>
+                  <a href="mailto:festcouncil_yugaantar@scaler.com" className={styles.contactMethod}>
+                    <span className={styles.icon}>✉</span>
+                    festcouncil_yugaantar@scaler.com
+                  </a>
+                  <a href="tel:+919391758678" className={styles.contactMethod}>
+                    <span className={styles.icon}>📞</span>
+                    +91 9391758678
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.contactCard}>
+              <div className={styles.contactHeader}>
+                <h3>Events</h3>
+              </div>
+              <div className={styles.contactDetails}>
+                <div className={styles.personInfo}>
+                  <h4>Yash Agarwal</h4>
+                  <p className={styles.title}>Event Head</p>
+                </div>
+                <div className={styles.contactMethods}>
+                  <a href="mailto:eventplanning_yugaantar@sst.scaler.com" className={styles.contactMethod}>
+                    <span className={styles.icon}>✉</span>
+                    eventplanning_yugaantar@sst.scaler.com
+                  </a>
+                  <a href="tel:+919339377327" className={styles.contactMethod}>
+                    <span className={styles.icon}>📞</span>
+                    +91 93393 77327
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Department Contacts */}
+          <div className={styles.departmentContacts}>
+            <div className={`${styles.deptCard} ${styles.deptCardLeft}`}>
+              <h3>Sponsorships</h3>
+              <a href="mailto:sponsorships_yugaantar@scaler.com" className={styles.emailLink}>
+                sponsorships_yugaantar@scaler.com
+              </a>
+            </div>
+            <div className={styles.deptCard}>
+              <h3>Marketing</h3>
+              <a href="mailto:marketing_yugaantar@sst.scaler.com" className={styles.emailLink}>
+                marketing_yugaantar@sst.scaler.com
+              </a>
+            </div>
           </div>
         </section>
 
@@ -296,27 +264,27 @@ const ContactUs: React.FC = () => {
           <div className={styles.socialIcons}>
             <a href="#" className={styles.socialIcon}>
               <img src={X} alt="X (Twitter)" />
-              <span>@yugaantarfest</span>
+              <span>@YUGAANTAR_SST</span>
             </a>
             <a href="#" className={styles.socialIcon}>
               <img src={LinkedIn} alt="LinkedIn" />
-              <span>YUGAANTAR Fest</span>
+              <span>@YUGAANTAR_SST</span>
             </a>
             <a href="#" className={styles.socialIcon}>
               <img src={Instagram} alt="Instagram" />
-              <span>@yugaantarfest</span>
+              <span>@YUGAANTAR_SST</span>
             </a>
             <a href="#" className={styles.socialIcon}>
               <img src={Youtube} alt="YouTube" />
-              <span>YUGAANTAR Official</span>
+              <span>@YUGAANTAR_SST</span>
             </a>
             <a href="#" className={styles.socialIcon}>
               <img src={Discord} alt="Discord" />
-              <span>YUGAANTAR Community</span>
+              <span>@YUGAANTAR_SST</span>
             </a>
             <a href="#" className={styles.socialIcon}>
               <img src={Globe} alt="Website" />
-              <span>yugaantarfest.com</span>
+              <span>yugaantar.org</span>
             </a>
           </div>
         </section>

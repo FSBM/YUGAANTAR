@@ -18,6 +18,11 @@ export {default as tech_fest_4} from './tech_v4.png'
 export {default as tech_fest_5} from './tech_v5.jpeg'
 export {default as tech_fest_6} from './tech_v6.png'
 
+
+
+export {default as cardBG_1} from './cardBG.png'
+export {default as cardBG_2} from './cardBG_2.png'
+
 // Icons
 export { default as X } from './X.svg'
 export { default as LinkedIn } from './LinkedIn.svg'
