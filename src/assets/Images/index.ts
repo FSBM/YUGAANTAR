@@ -15,7 +15,7 @@ export {default as tech_fest_1} from './tech_v1.png'
 export {default as tech_fest_2} from './tech_v2.png'
 export {default as tech_fest_3} from './tech_v3.png'
 export {default as tech_fest_4} from './tech_v4.png'
-export {default as tech_fest_5} from './tech_v5.jpeg'
+export {default as tech_fest_5} from './tech_v5.png'
 export {default as tech_fest_6} from './tech_v6.png'
 
 
